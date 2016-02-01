@@ -1,5 +1,5 @@
 FROM php:5.6.17-fpm
-MAINTAINER Mark Shust <mark.shust@mageinferno.com>
+MAINTAINER Marcelo Fernandes <marcelofernandes.mga@gmail.com>
 
 RUN apt-get update \
   && apt-get install -y \
@@ -23,9 +23,6 @@ RUN docker-php-ext-install \
   xsl \
   zip
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=1.0.0-alpha11
-
-RUN echo "*/1 * * * * /usr/local/bin/php /src/update/cron.php" | crontab -
 
 ENV PHP_MEMORY_LIMIT 2048M
 ENV PHP_PORT 9000

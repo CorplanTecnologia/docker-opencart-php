@@ -12,5 +12,7 @@
 # Start the cron service
 /usr/sbin/cron
 
+chown -R www-data:www-data /src
+
 # Start the php-fpm service
 /usr/local/sbin/php-fpm
