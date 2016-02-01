@@ -10,9 +10,9 @@
 [ ! -z "${PHP_PM}" ]                   && sed -i "s/PHP_PM/${PHP_PM}/" /usr/local/etc/php-fpm.conf
 
 # Start the cron service
-/usr/sbin/cron
+#/usr/sbin/cron
 
-chown -R www-data:www-data /src
+#chown -R www-data:www-data /src
 
 # Start the php-fpm service
 /usr/local/sbin/php-fpm
